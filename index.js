@@ -9,6 +9,38 @@ function computerPlay() {
 }
 
 
+function playRound (human , bot){
+
+if (human == bot) return "draw..." ;
+
+if (human == "rock" && bot == "scissor" || human == "scissor" && bot == "paper" || human == "paper" && bot == "rock"  ) return "You Won!";
+else return "you lost...";
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
