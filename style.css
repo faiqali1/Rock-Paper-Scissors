@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Roboto&display=swap');
+
 @keyframes backgroundGradient {
     0% {
       background-position: 0% 0%;
@@ -17,5 +19,52 @@
     color: #fff;
     background: linear-gradient(-45deg, #e2592f, #dd1964, #0faee7, #16d861);
     background-size: 400% 400%;
-    animation: backgroundGradient 15s ease infinite;
+    animation: backgroundGradient 30s ease-in-out infinite;
+  }
+
+
+  h2{
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 50px;
+    text-decoration: underline;
+  }
+
+  .Title{
+    padding-bottom: 8%;
+  }
+  
+  
+  .game-area{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+  }
+
+  .computer-area, .user-area {
+    border-style: dashed;
+    /* border-radius: 5px; */
+    max-width: 48vw;
+    margin: 10px;
+    padding: 10px;
+    height: 65vh;
+  }
+/* on the left */
+  .computer-area{
+    -ms-flex-align: start;
+    /* border-right-color: black; */
+    /* border-style: solid; */
+
+  }
+/* on the right */ 
+
+  .user-area{
+    -ms-flex-align: end;
+  }
+
+  #verticle-line {
+    width: 5px;
+    min-height:100%;
+    background: black;
   }
