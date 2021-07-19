@@ -13,11 +13,13 @@
 }
 
 body {
+  font-family: "Roboto", sans-serif;
   margin: 0;
   width: 100%;
   height: 100vh;
   color: #fff;
-  background: linear-gradient(-45deg, #e2592f, #dd1964, #0faee7, #16d861);
+  /* background: linear-gradient(-45deg, #e2592f, #dd1964, #0faee7, #16d861); */
+  background: #dd1964;
   background-size: 400% 400%;
   animation: backgroundGradient 30s ease-in-out infinite;
 }
@@ -30,13 +32,19 @@ h2 {
 }
 
 .Title {
-  padding-bottom: 8%;
+  padding-bottom: 6%;
+}
+
+.round-number {
+  text-transform: uppercase;
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  font-size: 35px;
 }
 
 .game-area {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .computer-area,
@@ -46,7 +54,7 @@ h2 {
   max-width: 48vw;
   margin: 10px;
   padding: 10px;
-  height: 65vh;
+  min-height: 60vh;
 }
 /* on the left */
 .computer-area {
@@ -60,8 +68,21 @@ h2 {
   -ms-flex-align: end;
 }
 
-#vertical-line {
-  width: 5px;
-  min-height: 100%;
-  background: black;
+.top-text {
+  text-align: center;
+  font-size: 25px;
+  padding-top: 6%;
+}
+
+.svg {
+  border-color: white;
+  border-style: solid;
+  size: 30px;
+  transform: scale(0.7);
+}
+
+.user-choice {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
