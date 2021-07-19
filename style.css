@@ -32,7 +32,8 @@ h2 {
 }
 
 .Title {
-  padding-bottom: 6%;
+  padding-top: 2%;
+  padding-bottom: 4%;
 }
 
 .round-number {
@@ -58,14 +59,14 @@ h2 {
 }
 /* on the left */
 .computer-area {
-  -ms-flex-align: start;
+  justify-content: center;
   /* border-right-color: black; */
   /* border-style: solid; */
 }
 /* on the right */
 
 .user-area {
-  -ms-flex-align: end;
+  justify-content: center;
 }
 
 .top-text {
@@ -75,16 +76,41 @@ h2 {
 }
 
 .svg {
-  border-color: white;
+  border-color: black;
+  border-width: 4px;
   border-style: solid;
-  transform: scale(0.7);
+  transform: scale(0.6);
   height: 180px;
   width: auto;
   padding: 15px 8px;
+  /* filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(334deg) brightness(102%) contrast(101%); */
+}
+
+.computer-choice {
+  display: grid;
+  justify-content: center;
 }
 
 .user-choice {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  /* align horizontal */
+  align-items: center;
+  /* align vertical */
+}
+
+.result-area{
+  text-align: center;
+  font-size: 23px;
+ font-weight: 300;
+ padding-top: 3%;
+}
+
+.final-result{
+  text-transform:capitalize ;
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  font-size: 40px;
 }
