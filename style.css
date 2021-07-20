@@ -32,8 +32,8 @@ h2 {
 }
 
 .Title {
-  padding-top: 2%;
-  padding-bottom: 4%;
+  padding-top: 1%;
+  padding-bottom: 3%;
 }
 
 .round-number {
@@ -50,7 +50,9 @@ h2 {
 
 .computer-area,
 .user-area {
-  border-style: dashed;
+  /* border-style: dashed; */
+  /* border-color: black;
+  border-style:solid; */
   /* border-radius: 5px; */
   max-width: 48vw;
   margin: 10px;
@@ -60,8 +62,6 @@ h2 {
 /* on the left */
 .computer-area {
   justify-content: center;
-  /* border-right-color: black; */
-  /* border-style: solid; */
 }
 /* on the right */
 
@@ -86,8 +86,14 @@ h2 {
   /* filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(334deg) brightness(102%) contrast(101%); */
 }
 
+.svg:hover {
+  transform: scale(0.7);
+  box-shadow: 0 0 30px black;
+}
+
 .computer-choice {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -101,16 +107,17 @@ h2 {
   /* align vertical */
 }
 
-.result-area{
+.result-area {
   text-align: center;
   font-size: 23px;
- font-weight: 300;
- padding-top: 3%;
+  font-weight: 300;
+  padding-top: 3%;
 }
 
-.final-result{
-  text-transform:capitalize ;
+.final-result {
+  text-transform: capitalize;
   font-family: "Quicksand", sans-serif;
   text-align: center;
   font-size: 40px;
 }
+
