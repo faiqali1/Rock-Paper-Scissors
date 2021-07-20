@@ -1,3 +1,5 @@
+let  userChoice = '';
+
 function computerPlay() {
   let options = ["rock", "paper", "scissor"];
 
@@ -20,37 +22,46 @@ function playRound(human, bot) {
 function game() {
   let humanWins = 0;
   let botWins = 0;
+  let round = 1;
 
   while (humanWins != 5 || botWins != 5) {
     
     if (humanWins == 5 || botWins == 5) break;
-
-    let human = "paper";
+    let human = userChoice;
     let bot = computerPlay();
     UpdateComputerPicture(bot);
+    document.getElementById("number").innerHTML = round;
 
+    // while (userChoice === '') {
+    //     console.log("waiting...");
+    // }
 
-    
     // console.log("Computer Chose: " + bot + "\n");
 
-    if (playRound(human, bot) == "You Won!") humanWins++;
-    else if (playRound(human, bot) == "draw...") continue;
-    else botWins++;
-
+    if (playRound(human, bot) === "You Won!"){ 
+        humanWins++
+        document.getElementById("user-wins").innerHTML = humanWins;
+        document.getElementById("result").innerHTML = "You win...";
+    } 
+    else if (playRound(human, bot) === "draw..."){
+        document.getElementById("result").innerHTML = "Draw....";
+        continue;
+    } 
+    else { // bot wins...
+        botWins++;
+        document.getElementById("computer-wins").innerHTML = botWins;
+        document.getElementById("result").innerHTML = "You lose...";
+    }
+    round++;
     // console.log("\n"+ "humanwins :" + humanWins);
     // console.log("botwins :" +botWins);
-  }
-
-  if (humanWins == 5) return "humans win";
-  else if (botWins == 5) return "bots win";
-  else return "error";
 }
 
-
-document.getElementById("myiamge").innerHTML = botWins++;
-
-
-
+   // document.getElementById("result").innerHTML = "Game Over You win!! ";
+  if (humanWins == 5) return document.getElementById("result").innerHTML = "Game Over You win!! ";
+  else if (botWins == 5) return document.getElementById("result").innerHTML = "Game Over try again!! ";
+  else return "error";
+}
 
 function UpdateComputerPicture(CompChoice) {
  // let CompChoice = computerPlay();
@@ -76,4 +87,11 @@ function UpdateComputerPicture(CompChoice) {
 
 // console.log(game());
 
-document.getElementById("computer-img").addEventListener("click", UpdateComputerPicture);
+// document.getElementById("computer-img").addEventListener("click", UpdateComputerPicture);
+
+
+function userInput( user ) {
+    userChoice=user;
+}
+
+game();
