@@ -1,4 +1,7 @@
-let  userChoice = '';
+let humanWins = 0;
+let botWins = 0;
+let round = 1;
+
 
 function computerPlay() {
   let options = ["rock", "paper", "scissor"];
@@ -19,33 +22,25 @@ function playRound(human, bot) {
   else return "you lost...";
 }
 
-function game() {
-  let humanWins = 0;
-  let botWins = 0;
-  let round = 1;
+function game(userChoice) {
 
-  while (humanWins != 5 || botWins != 5) {
-    
-    if (humanWins == 5 || botWins == 5) break;
+   if (humanWins == 5 || botWins == 5) return;
     let human = userChoice;
     let bot = computerPlay();
     UpdateComputerPicture(bot);
     document.getElementById("number").innerHTML = round;
 
-    // while (userChoice === '') {
-    //     console.log("waiting...");
-    // }
 
     // console.log("Computer Chose: " + bot + "\n");
 
-    if (playRound(human, bot) === "You Won!"){ 
+        // incrementing the winner
+    if (playRound(human, bot) == "You Won!"){ 
         humanWins++
         document.getElementById("user-wins").innerHTML = humanWins;
         document.getElementById("result").innerHTML = "You win...";
     } 
-    else if (playRound(human, bot) === "draw..."){
+    else if (playRound(human, bot) == "draw..."){
         document.getElementById("result").innerHTML = "Draw....";
-        continue;
     } 
     else { // bot wins...
         botWins++;
@@ -55,7 +50,7 @@ function game() {
     round++;
     // console.log("\n"+ "humanwins :" + humanWins);
     // console.log("botwins :" +botWins);
-}
+
 
    // document.getElementById("result").innerHTML = "Game Over You win!! ";
   if (humanWins == 5) return document.getElementById("result").innerHTML = "Game Over You win!! ";
@@ -94,4 +89,7 @@ function userInput( user ) {
     userChoice=user;
 }
 
-game();
+// function setGameState() {
+    
+// }
+
