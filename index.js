@@ -24,7 +24,10 @@ function playRound(human, bot) {
 
 function game(userChoice) {
 
-   if (humanWins == 5 || botWins == 5) return;
+   if (humanWins == 5 || botWins == 5) {
+     alert("Reload the page to play again");
+     return;
+  }
     let human = userChoice;
     let bot = computerPlay();
     UpdateComputerPicture(bot);
