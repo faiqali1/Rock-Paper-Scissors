@@ -67,15 +67,15 @@ function UpdateComputerPicture(CompChoice) {
   switch (CompChoice) {
     case "rock":
       document.getElementById("computer-img").src =
-        "/Assets/mycollection(pure)/svg/002-rock.svg";
+        "Assets/mycollection(pure)/svg/002-rock.svg";
       break;
     case "paper":
       document.getElementById("computer-img").src =
-        "/Assets/mycollection(pure)/svg/001-file.svg";
+        "Assets/mycollection(pure)/svg/001-file.svg";
       break;
     case "scissor":
       document.getElementById("computer-img").src =
-        "/Assets/mycollection(pure)/svg/003-scissors.svg";
+        "Assets/mycollection(pure)/svg/003-scissors.svg";
       break;
 
     default:
